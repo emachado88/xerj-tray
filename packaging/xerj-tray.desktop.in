@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=XERJ Tray
+GenericName=XERJ tray controller
+Comment=Start or stop the XERJ search engine from the system tray
+Exec=@HOME@/.local/bin/xerj-tray
+Icon=system-search
+Terminal=false
+Categories=Utility;
+Keywords=xerj;search;engine;tray;daemon;
+StartupNotify=false
+X-KDE-autostart-after=panel

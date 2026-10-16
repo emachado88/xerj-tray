@@ -1,0 +1,14 @@
+[Unit]
+Description=XERJ Search Engine Daemon
+Documentation=https://xerj.org
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/xerj --insecure --data-dir %h/.local/share/xerj/data
+Restart=no
+KillSignal=SIGTERM
+TimeoutStopSec=60
+
+[Install]
+WantedBy=default.target

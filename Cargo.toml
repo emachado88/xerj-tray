@@ -1,0 +1,17 @@
+[package]
+name = "xerj-tray"
+version = "0.1.0"
+edition = "2024"
+description = "StatusNotifierItem tray controller for the XERJ search engine daemon"
+license = "MIT"
+
+[dependencies]
+# 0.3.6 is the version proven in xtream-pt-epg; the `blocking` feature gives us
+# the blocking spawn()/Handle API, so no async runtime is needed.
+ksni = { version = "0.3.6", features = ["blocking"] }
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true
